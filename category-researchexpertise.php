@@ -56,10 +56,6 @@ $affichage_portfolio = get_field('sedoo_affichage_en_portfolio', $term);
 				archive_do_portfolio_display($term);
 			}
 
-		
-		?>
-
-            <?php
             /**
              * WP_Query pour lister tous les types de posts
              */
