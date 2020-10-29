@@ -3,7 +3,7 @@
 ?>
 <div class="sedoo_portfolio_item">
     <article id="post-<?php the_ID(); ?>" <?php post_class('post '.$classParameter.''); ?>>
-        <a href="<?php the_permalink(); ?>" title="<?php echo __('Read more', 'sedoo-wpth-labs'); ?>"></a>
+        <a href="<?php the_permalink(); ?>" title="<?php echo __('Read more', 'sedoo-wpth-labs'); ?>">
             <header class="entry-header">
                 <figure>
                     <?php 
@@ -45,5 +45,6 @@
                 <?php endif; ?>
                 </footer><!-- .entry-footer -->
             </div>
+        </a>
     </article><!-- #post-->
 </div>
