@@ -652,3 +652,15 @@ function theia_wpthchild_pagination_bar( $custom_query ) {
 require 'inc/theia-acf-config.php';
 require 'inc/theia-acf-block.php';
 require 'inc/theia-displays.php';
+
+/**
+ * Allow gutenberg reusable bloc on export screen
+ */
+
+function theia_wpthchild_support_reusable_block_export( $post_type_args, $post_type ) {
+	if ( 'wp_block' === $post_type ) {
+		$post_type_args['can_export'] = true;
+	}
+	return $post_type_args;
+}
+add_filter( 'register_post_type_args', 'theia_wpthchild_support_reusable_block_export', 10, 2 );
